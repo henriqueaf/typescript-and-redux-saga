@@ -1,3 +1,7 @@
+## TypeScript and redux-saga study
+
+[![Build Status](https://travis-ci.org/henriqueaf/typescript-and-redux-saga.svg?branch=master)](https://travis-ci.org/henriqueaf/typescript-and-redux-saga)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
