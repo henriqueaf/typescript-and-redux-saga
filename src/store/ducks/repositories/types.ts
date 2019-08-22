@@ -1,5 +1,3 @@
-const MODULE_NAME = 'repositories';
-
 /**
  * Action types
  */
@@ -15,6 +13,10 @@ export enum RepositoriesTypes {
 export interface Repository {
   id: number;
   name: string;
+}
+
+export interface RepositoriesList {
+  repositories: Repository[];
 }
 
 /**
