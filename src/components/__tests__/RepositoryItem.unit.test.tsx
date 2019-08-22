@@ -18,6 +18,6 @@ describe('RepositoryItem', () => {
     const repositoryItemInstance = wrapper.root;
 
     expect(repositoryItemInstance.findByType('li').children[0]).toBe('teste');
-    expect(repositoryItemInstance).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

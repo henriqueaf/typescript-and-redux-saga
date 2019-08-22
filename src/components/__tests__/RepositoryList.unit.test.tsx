@@ -28,6 +28,10 @@ const mount = (props?: Object) => {
 };
 
 describe('RepositoryList', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('Renders an empty ul', () => {
     const { wrapper } = mount();
 
@@ -48,6 +52,8 @@ describe('RepositoryList', () => {
     ];
 
     const { repositoriesList } = mount({ repositories });
+
     expect(repositoriesList.length).toBe(2);
+    expect(mockLoadRequest).toBeCalledTimes(1);
   });
 });
