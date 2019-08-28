@@ -6,7 +6,7 @@ module.exports = {
   },
   extends: [
     'react-app',
-    'airbnb',
+    // 'airbnb',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
   ],
