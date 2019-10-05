@@ -8,7 +8,7 @@ export function* load() {
     const response = yield call(api.get, 'users/diego3g/repos');
 
     yield put(loadSuccess(response.data));
-  } catch (err) {
-    yield put(loadFailure());
+  } catch (error) {
+    yield put(loadFailure(error));
   }
 }

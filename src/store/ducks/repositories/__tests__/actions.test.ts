@@ -25,8 +25,13 @@ describe('repositories actions', () => {
   });
 
   test('loadFailure', () => {
-    expect(actions.loadFailure()).toEqual({
+    const error = new Error('some error');
+
+    expect(actions.loadFailure(error)).toEqual({
       type: '@repositories/LOAD_FAILURE',
+      payload: {
+        error,
+      },
     });
   });
 });
