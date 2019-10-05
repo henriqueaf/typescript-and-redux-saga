@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepositoryList Matches snapshot 1`] = `
+<ul>
+  <li>
+    testando 1
+  </li>
+</ul>
+`;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 
 import {
   Repository,
@@ -15,24 +15,18 @@ interface DispatchProps {
 
 export type Props = StateProps & DispatchProps;
 
-class RepositoryList extends Component<Props> {
-  componentDidMount() {
-    const { loadRequest } = this.props;
-
+const RepositoryList: React.SFC<Props> = ({ repositories, loadRequest }) => {
+  useEffect(() => {
     loadRequest();
-  }
+  }, []);
 
-  render() {
-    const { repositories } = this.props;
-
-    return (
-      <ul>
-        {repositories.map(repository => (
-          <RepositoryItem key={repository.id} repository={repository} />
-        ))}
-      </ul>
-    );
-  }
-}
+  return (
+    <ul>
+      {repositories.map(repository => (
+        <RepositoryItem key={repository.id} repository={repository} />
+      ))}
+    </ul>
+  );
+};
 
 export default RepositoryList;

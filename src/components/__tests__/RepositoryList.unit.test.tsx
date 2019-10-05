@@ -32,6 +32,23 @@ describe('RepositoryList', () => {
     jest.clearAllMocks();
   });
 
+  it('Matches snapshot', () => {
+    const repositories: Repository[] = [
+      {
+        id: 1,
+        name: 'testando 1',
+      },
+    ];
+
+    const { wrapper } = mount({ repositories });
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('Trigger loadRequest when component is mounted', () => {
+    mount();
+    expect(mockLoadRequest).toBeCalledTimes(1);
+  });
+
   it('Renders an empty ul', () => {
     const { wrapper } = mount();
 
