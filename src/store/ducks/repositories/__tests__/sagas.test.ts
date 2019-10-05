@@ -9,7 +9,7 @@ describe('repositories sagas', () => {
     const generator = load();
 
     expect(generator.next().value).toEqual(
-      call(api.get, 'users/diego3g/repos')
+      call(api.get, 'users/henriqueaf/repos')
     );
 
     const response = {
@@ -32,7 +32,7 @@ describe('repositories sagas', () => {
     const generator = load();
 
     expect(generator.next().value).toEqual(
-      call(api.get, 'users/diego3g/repos')
+      call(api.get, 'users/henriqueaf/repos')
     );
 
     if (generator.throw) {
