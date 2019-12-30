@@ -4,6 +4,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+See live demo: https://henriqueaf.github.io/typescript-and-redux-saga/
+
+The project have an automatic deploy by Travis-CI after a merged request on master.
+
 ## Available Scripts
 
 In the project directory, you can run:
